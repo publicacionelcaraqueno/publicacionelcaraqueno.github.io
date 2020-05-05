@@ -89,12 +89,12 @@ title: El Caraqueño
                         <div class="blog-post bg-light-gray inner-match-height">
                             <div class="blog-post-images overflow-hidden position-relative">
                                 <a href="{{ article.url }}">
-                                    <img src="{{ article.preview_image }}" alt="">
+                                    <img src="https://el-caraqueno.s3.amazonaws.com/{{ article.preview_image }}" alt="{{ article.title }}">
                                     <div class="blog-hover-icon"><span class="text-extra-large font-weight-300">+</span></div>
                                 </a>
                             </div>
                             <div class="post-details padding-40px-all md-padding-20px-all">
-                                <a href="blog-post-layout-01.html" class="alt-font post-title text-medium text-extra-dark-gray width-100 d-block md-width-100 margin-15px-bottom">
+                                <a href="{{ article.url }}" class="alt-font post-title text-medium text-extra-dark-gray width-100 d-block md-width-100 margin-15px-bottom">
                                     {{ article.title }}
                                 </a>
                                 <p>
