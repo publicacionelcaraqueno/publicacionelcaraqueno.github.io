@@ -22,13 +22,26 @@ layout: default
                         <span class="first-letter first-letter-block bg-extra-dark-gray text-white-2">
                             {{ page.decorative_letter}}
                         </span>
-                        {{ page.first_paragraph}}
+                        {{ page.intro_paragraph }}
                     </p>
+
+                    {% unless page.blockquote == "" %}
+                    <blockquote class="border-color-deep-pink">
+                        <p>
+                            {{ page.blockquote}}
+                        </p>
+                        <footer>{{ page.blockquote_author }}</footer>
+                    </blockquote>
+                    {% endunless %}
+
                     <figure class="wp-caption alignleft">
                         <img alt="{{ page.image_legend }}" src="https://el-caraqueno.s3.amazonaws.com/{{ page.image_file }}">
                         <figcaption class="wp-caption-text">{{ page.image_legend }}</figcaption>
-                    </figure>
-                    <p>{{ page.second_paragraph }}</p>                            
+                    </figure>     
+
+                    {% for paragraph in page.other_paragraphs %}
+                        <p>{{ paragraph }}</p>  
+                    {% endfor %}                          
                 </div>
                 <div class="col-12 margin-seven-bottom margin-eight-top">
                     <div class="divider-full bg-medium-light-gray"></div>

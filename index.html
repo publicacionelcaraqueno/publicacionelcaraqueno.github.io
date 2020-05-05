@@ -83,165 +83,34 @@ title: El Caraqueño
         <div class="row">
             <main class="col-12 col-lg-9 right-sidebar md-margin-60px-bottom sm-margin-40px-bottom pl-0 md-no-padding-right">
                 <div class="d-flex flex-wrap hover-option4 blog-post-style3">
-                    <!-- start post item -->
+                    
+                    {% for article in site.editorial %}
                     <div class="grid-item col-12 col-md-6 margin-30px-bottom text-center text-md-left wow fadeInUp">
                         <div class="blog-post bg-light-gray inner-match-height">
                             <div class="blog-post-images overflow-hidden position-relative">
-                                <a href="blog-post-layout-01.html">
-                                    <img src="images/blog-img115.jpg" alt="">
+                                <a href="{{ article.url }}">
+                                    <img src="{{ article.preview_image }}" alt="">
                                     <div class="blog-hover-icon"><span class="text-extra-large font-weight-300">+</span></div>
                                 </a>
                             </div>
                             <div class="post-details padding-40px-all md-padding-20px-all">
-                                <a href="blog-post-layout-01.html" class="alt-font post-title text-medium text-extra-dark-gray width-100 d-block md-width-100 margin-15px-bottom">I find modernist design boring, but it so much faster!</a>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum standard dummy...</p>
-                                <div class="separator-line-horrizontal-full bg-medium-gray margin-20px-tb"></div>
-                                <div class="author">
-                                    <span class="text-medium-gray text-uppercase text-extra-small d-block d-lg-inline-block md-margin-10px-top">by <a href="blog-masonry.html" class="text-medium-gray">Jay Benjamin</a>&nbsp;&nbsp;|&nbsp;&nbsp;13 May 2017</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end post item -->
-                    <!-- start post item -->
-                    <div class="grid-item col-12 col-md-6 margin-30px-bottom text-center text-md-left wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="blog-post bg-light-gray inner-match-height">
-                            <div class="blog-post-images overflow-hidden position-relative">
-                                <a href="blog-post-layout-02.html">
-                                    <img src="images/blog-img116.jpg" alt="">
-                                    <div class="blog-hover-icon"><span class="text-extra-large font-weight-300">+</span></div>
+                                <a href="blog-post-layout-01.html" class="alt-font post-title text-medium text-extra-dark-gray width-100 d-block md-width-100 margin-15px-bottom">
+                                    {{ article.title }}
                                 </a>
-                            </div>
-                            <div class="post-details padding-40px-all md-padding-20px-all">
-                                <a href="blog-post-layout-02.html" class="alt-font post-title text-medium text-extra-dark-gray width-100 d-block md-width-100 margin-15px-bottom">Being a famous designer is like being a famous dentist.</a>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum standard dummy...</p>
+                                <p>
+                                    {{ article.preview_sentence }}
+                                </p>
                                 <div class="separator-line-horrizontal-full bg-medium-gray margin-20px-tb"></div>
                                 <div class="author">
-                                    <span class="text-medium-gray text-uppercase text-extra-small d-block d-lg-inline-block md-margin-10px-top">by <a href="blog-masonry.html" class="text-medium-gray">Herman Miller</a>&nbsp;&nbsp;|&nbsp;&nbsp;29 April 2017</span>
+                                    <span class="text-medium-gray text-uppercase text-extra-small d-block d-lg-inline-block md-margin-10px-top">
+                                        {{ article.publish_date }}
+                                    </span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- end post item -->
-                    <!-- start post item -->
-                    <div class="grid-item col-12 col-md-6 margin-30px-bottom text-center text-md-left wow fadeInUp">
-                        <div class="blog-post bg-light-gray inner-match-height">
-                            <div class="blog-post-images overflow-hidden position-relative">
-                                <a href="blog-post-layout-03.html">
-                                    <img src="images/blog-img120.jpg" alt="">
-                                    <div class="blog-hover-icon"><span class="text-extra-large font-weight-300">+</span></div>
-                                </a>
-                            </div>
-                            <div class="post-details padding-40px-all md-padding-20px-all">
-                                <a href="blog-post-layout-03.html" class="alt-font post-title text-medium text-extra-dark-gray width-100 d-block md-width-100 margin-15px-bottom">Designers are meant to be loved, not to be understood.</a>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum standard dummy....</p>
-                                <div class="separator-line-horrizontal-full bg-medium-gray margin-20px-tb"></div>
-                                <div class="author">
-                                    <span class="text-medium-gray text-uppercase text-extra-small d-block d-lg-inline-block md-margin-10px-top">by <a href="blog-masonry.html" class="text-medium-gray">Hugh Macleod</a>&nbsp;&nbsp;|&nbsp;&nbsp;18 April 2017</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end post item -->
-                    <div class="grid-item col-12 col-md-6 margin-30px-bottom text-center text-md-left wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="blog-post bg-light-gray inner-match-height">
-                            <div class="blog-post-images overflow-hidden position-relative">
-                                <a href="blog-post-layout-04.html">
-                                    <img src="images/blog-img117.jpg" alt="">
-                                    <div class="blog-hover-icon"><span class="text-extra-large font-weight-300">+</span></div>
-                                </a>
-                            </div>
-                            <div class="post-details padding-40px-all md-padding-20px-all">
-                                <a href="blog-post-layout-04.html" class="alt-font post-title text-medium text-extra-dark-gray width-100 d-block md-width-100 margin-15px-bottom">Design is the conscious effort to impose a meaningful order.</a>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum standard dummy...</p>
-                                <div class="separator-line-horrizontal-full bg-medium-gray margin-20px-tb"></div>
-                                <div class="author">
-                                    <span class="text-medium-gray text-uppercase text-extra-small d-block d-lg-inline-block md-margin-10px-top">by <a href="blog-masonry.html" class="text-medium-gray">Willie Clark</a>&nbsp;&nbsp;|&nbsp;&nbsp;31 March 2017</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end post item -->
-                    <!-- start post item -->
-                    <div class="grid-item col-12 col-md-6 margin-30px-bottom text-center text-md-left wow fadeInUp">
-                        <div class="blog-post bg-light-gray inner-match-height">
-                            <div class="blog-post-images overflow-hidden position-relative">
-                                <a href="blog-post-layout-01.html">
-                                    <img src="images/blog-img118.jpg" alt="">
-                                    <div class="blog-hover-icon"><span class="text-extra-large font-weight-300">+</span></div>
-                                </a>
-                            </div>
-                            <div class="post-details padding-40px-all md-padding-20px-all">
-                                <a href="blog-post-layout-01.html" class="alt-font post-title text-medium text-extra-dark-gray width-100 d-block md-width-100 margin-15px-bottom">Good design is a lot like clear thinking made visual.</a>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum standard dummy...</p>
-                                <div class="separator-line-horrizontal-full bg-medium-gray margin-20px-tb"></div>
-                                <div class="author">
-                                    <span class="text-medium-gray text-uppercase text-extra-small d-block d-lg-inline-block md-margin-10px-top">by <a href="blog-masonry.html" class="text-medium-gray">John Doe</a>&nbsp;&nbsp;|&nbsp;&nbsp;09 March 2017</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end post item -->
-                    <!-- start post item -->
-                    <div class="grid-item col-12 col-md-6 margin-30px-bottom text-center text-md-left wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="blog-post bg-light-gray inner-match-height">
-                            <div class="blog-post-images overflow-hidden position-relative">
-                                <a href="blog-post-layout-02.html">
-                                    <img src="images/blog-img35.jpg" alt="">
-                                    <div class="blog-hover-icon"><span class="text-extra-large font-weight-300">+</span></div>
-                                </a>
-                            </div>
-                            <div class="post-details padding-40px-all md-padding-20px-all">
-                                <a href="blog-post-layout-02.html" class="alt-font post-title text-medium text-extra-dark-gray width-100 d-block md-width-100 margin-15px-bottom">Design is as much an act of spacing as an act of marking.</a>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum standard dummy....</p>
-                                <div class="separator-line-horrizontal-full bg-medium-gray margin-20px-tb"></div>
-                                <div class="author">
-                                    <span class="text-medium-gray text-uppercase text-extra-small d-block d-lg-inline-block md-margin-10px-top">by <a href="blog-masonry.html" class="text-medium-gray">Isaac Tobin</a>&nbsp;&nbsp;|&nbsp;&nbsp;20 February 2017</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end post item -->
-                    <!-- start post item -->
-                    <div class="grid-item col-12 col-md-6 text-center text-md-left wow fadeInUp md-margin-30px-bottom">
-                        <div class="blog-post bg-light-gray inner-match-height">
-                            <div class="blog-post-images overflow-hidden position-relative">
-                                <a href="blog-post-layout-03.html">
-                                    <img src="images/blog-img40.jpg" alt="">
-                                    <div class="blog-hover-icon"><span class="text-extra-large font-weight-300">+</span></div>
-                                </a>
-                            </div>
-                            <div class="post-details padding-40px-all md-padding-20px-all">
-                                <a href="blog-post-layout-03.html" class="alt-font post-title text-medium text-extra-dark-gray width-100 d-block md-width-100 margin-15px-bottom">Good design goes to heaven; bad design goes everywhere.</a>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum standard dummy....</p>
-                                <div class="separator-line-horrizontal-full bg-medium-gray margin-20px-tb"></div>
-                                <div class="author">
-                                    <span class="text-medium-gray text-uppercase text-extra-small d-block d-lg-inline-block md-margin-10px-top">by <a href="blog-masonry.html" class="text-medium-gray">Jason Bourne</a>&nbsp;&nbsp;|&nbsp;&nbsp;14 January 2017</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end post item -->
-                    <!-- start post item -->
-                    <div class="grid-item col-12 col-md-6 text-center text-md-left wow fadeInUp md-margin-30px-bottom" data-wow-delay="0.2s">
-                        <div class="blog-post bg-light-gray inner-match-height">
-                            <div class="blog-post-images overflow-hidden position-relative">
-                                <a href="blog-post-layout-04.html">
-                                    <img src="images/blog-img119.jpg" alt="">
-                                    <div class="blog-hover-icon"><span class="text-extra-large font-weight-300">+</span></div>
-                                </a>
-                            </div>
-                            <div class="post-details padding-40px-all md-padding-20px-all">
-                                <a href="blog-post-layout-04.html" class="alt-font post-title text-medium text-extra-dark-gray width-100 d-block md-width-100 margin-15px-bottom">Good design is obvious. Great design is transparent.</a>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum standard dummy....</p>
-                                <div class="separator-line-horrizontal-full bg-medium-gray margin-20px-tb"></div>
-                                <div class="author">
-                                    <span class="text-medium-gray text-uppercase text-extra-small d-block d-lg-inline-block md-margin-10px-top">by <a href="blog-masonry.html" class="text-medium-gray">Amanda Holmes</a>&nbsp;&nbsp;|&nbsp;&nbsp;01 January 2017</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end post item -->
+                    {% endfor %}
+
                 </div>
                 <!-- start slider pagination -->
                 <div class="col-12 text-center margin-100px-top md-margin-50px-top wow fadeInUp">
