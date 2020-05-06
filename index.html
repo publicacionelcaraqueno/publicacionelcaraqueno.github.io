@@ -7,20 +7,33 @@ title: El Caraqueño
     <div class="container-fluid padding-30px-lr sm-padding-15px-lr">
         <div class="swiper-full-screen swiper-container width-100">
             <div class="swiper-wrapper">
+                {% for article in site.editorial limit:3 %}
                 <!-- start slider item -->
-                <div class="swiper-slide cover-background" style="background-image:url('images/blog-slider-img5.jpg')">
+                <div class="swiper-slide cover-background" style="background-image:url('https://el-caraqueno.s3.amazonaws.com/{{ article.large_image }}')">
                     <div class="opacity-extra-medium bg-extra-dark-gray"></div>
                     <div class="container position-relative one-fourth-screen sm-height-400px">
                         <div class="slider-typography text-center">
                             <div class="slider-text-middle-main">
                                 <div class="slider-text-middle">
                                     <div class="col-12 col-lg-6 col-md-8 mx-auto slide-content">
-                                        <div class="blog-post-content margin-45px-bottom sm-margin-30px-bottom sm-text-center">
-                                            <div class="fit-videos">
-                                                <!-- start vimeo video -->
-                                                <video autoplay muted loop controls><source src="https://el-caraqueno.s3.amazonaws.com/videopollitoenhuevo.mp4" type="video/mp4"></video>
-                                                <!-- end vimeo video -->
-                                            </div> 
+                                        <div class="padding-50px-all sm-padding-30px-all bg-black-opacity">
+                                            {% for category in article.categories %}
+                                                <a href="#" class="text-medium-pink text-extra-small text-uppercase alt-font font-weight-600 margin-10px-bottom d-inline-block">
+                                                    {{ category }}
+                                                </a>
+                                                {% if forloop.last %}
+                                                {% else %}
+                                                    |
+                                                {% endif %}
+                                            {% endfor %}
+                                            <h4>
+                                                <a href="{{ article.url }}" class="font-weight-600 text-white-2 alt-font">
+                                                    {{ article.title }}
+                                                </a>
+                                            </h4>
+                                            <a class="btn btn-very-small btn-transparent-white" href="{{ article.url }}">
+                                                Continuar leyendo
+                                            </a>
                                         </div> 
                                     </div>
                                 </div>
@@ -28,46 +41,7 @@ title: El Caraqueño
                         </div>
                     </div>
                 </div>
-                <!-- end slider item -->
-                <!-- start slider item -->
-                <div class="swiper-slide cover-background" style="background-image:url('images/blog-slider-img6.jpg')">
-                    <div class="opacity-extra-medium bg-extra-dark-gray"></div>
-                    <div class="container position-relative one-fourth-screen sm-height-400px">
-                        <div class="slider-typography text-center">
-                            <div class="slider-text-middle-main">
-                                <div class="slider-text-middle">
-                                    <div class="col-12 col-lg-6 col-md-8 mx-auto slide-content">
-                                        <div class="padding-50px-all sm-padding-30px-all bg-black-opacity">
-                                            <a href="blog-grid.html" class="text-medium-gray text-extra-small text-uppercase alt-font font-weight-600 margin-10px-bottom d-inline-block">Branding and Identity</a>
-                                            <h4><a href="blog-post-layout-02.html" class="font-weight-600 text-white-2 alt-font">Young pretty girl posing in the street</a></h4>
-                                            <a class="btn btn-very-small btn-transparent-white" href="blog-post-layout-02.html">Continue Reading</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end slider item -->
-                <!-- start slider item -->
-                <div class="swiper-slide cover-background" style="background-image:url('images/blog-slider-img7.jpg')">
-                    <div class="opacity-extra-medium bg-extra-dark-gray"></div>
-                    <div class="container position-relative one-fourth-screen sm-height-400px">
-                        <div class="slider-typography text-center">
-                            <div class="slider-text-middle-main">
-                                <div class="slider-text-middle">
-                                    <div class="col-12 col-lg-6 col-md-8 mx-auto slide-content">
-                                        <div class="padding-50px-all sm-padding-30px-all bg-black-opacity">
-                                            <a href="blog-grid.html" class="text-medium-gray text-extra-small text-uppercase alt-font font-weight-600 margin-10px-bottom d-inline-block">Branding and Identity</a>
-                                            <h4><a href="blog-post-layout-03.html" class="font-weight-600 text-white-2 alt-font">Do one thing every day that scares you</a></h4>
-                                            <a class="btn btn-very-small btn-transparent-white" href="blog-post-layout-03.html">Continue Reading</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
                 <!-- end slider item -->
             </div>
             <!-- Add Pagination -->
