@@ -7,7 +7,7 @@ title: El Caraqueño
     <div class="container-fluid padding-30px-lr sm-padding-15px-lr">
         <div class="swiper-full-screen swiper-container width-100">
             <div class="swiper-wrapper">
-                {% for article in site.editorial limit:3 %}
+                {% for article in site.editorial reversed limit:3 %}
                 <!-- start slider item -->
                 <div class="swiper-slide cover-background" style="background-image:url('https://el-caraqueno.s3.amazonaws.com/{{ article.large_image }}')">
                     <div class="opacity-extra-medium bg-extra-dark-gray"></div>
@@ -58,7 +58,7 @@ title: El Caraqueño
             <main class="col-12 col-lg-9 right-sidebar md-margin-60px-bottom sm-margin-40px-bottom pl-0 md-no-padding-right">
                 <div class="d-flex flex-wrap hover-option4 blog-post-style3">
                     
-                    {% for article in site.editorial %}
+                    {% for article in site.editorial reversed offset:3%}
                     <div class="grid-item col-12 col-md-6 margin-30px-bottom text-center text-md-left wow fadeInUp">
                         <div class="blog-post bg-light-gray inner-match-height">
                             <div class="blog-post-images overflow-hidden position-relative text-center">
