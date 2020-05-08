@@ -1,54 +1,7 @@
 ---
 layout: default
 title: Arte - El Caraqueño
+categoria: Arte
+background_image: arte
 ---
-
-<section class="wow fadeIn parallax bg-extra-dark-gray" data-stellar-background-ratio="0.5" style="background-image:url('{{ baseurl }}/assets/images/arte.jpg'); visibility: visible; animation-name: fadeIn;">
-    <div class="opacity-medium bg-extra-dark-gray"></div>
-    <div class="container">
-        <div class="row">
-            <div style="padding-top: 80px;" class="col-12 extra-small-screen text-center page-title-extra-small d-flex flex-column justify-content-center">
-                <!-- start title -->
-                <h2 class="text-white-2 alt-font font-weight-600 width-55 md-width-80 mx-auto sm-width-100 letter-spacing-minus-1 line-height-50 md-line-height-45 sm-line-height-30">
-                    Arte
-                </h2>
-                <!-- end title -->
-            </div>
-        </div>
-    </div>
-</section>
-<section>
-    <div class="container">
-        <div class="row">
-            <main class="col-12 col-lg-9 right-sidebar md-margin-60px-bottom sm-margin-40px-bottom md-padding-15px-lr">
-                {% for post in site.posts %}
-                    {% if post.categories contains "Arte" %}                
-                    <div class="blog-post-content d-flex align-items-center flex-wrap margin-60px-bottom padding-60px-bottom border-bottom border-color-extra-light-gray md-margin-30px-bottom md-padding-30px-bottom text-center text-md-left md-no-border">
-                        <div class="col-12 col-lg-4 col-md-5 p-0 md-margin-30px-bottom sm-margin-20px-bottom margin-45px-right md-no-margin-right">
-                            <a href="{{ post.url }}"><img src="https://el-caraqueno.s3.amazonaws.com/{{ post.preview_image }}" alt="{{ post.title }}" data-no-retina="" style="max-height: 200px;"></a>
-                        </div>
-                        <div class="col-12 col-lg-8 col-md-7 blog-text p-0">
-                            <div class="content margin-20px-bottom md-no-padding-left">
-                                <a href="{{ post.url }}" class="text-extra-dark-gray margin-5px-bottom alt-font text-extra-large font-weight-600 d-inline-block">
-                                    {{ post.title }}
-                                </a>
-                                <div class="text-medium-gray text-extra-small margin-15px-bottom text-uppercase alt-font">
-                                    <span>
-                                        {{ post.publish_date }}
-                                    </span>
-                                </div>
-                                <p class="m-0 width-95">
-                                    {{ post.preview_sentence }}
-                                </p>
-                            </div>
-                            <a class="btn btn-very-small btn-dark-gray text-uppercase" href="{{ post.url }}">Continuar leyendo</a>
-                        </div>
-                    </div>
-                    {% endif %}
-                {% endfor %}
-            </main>
-
-			{% include sidebar.html %}
-        </div>
-    </div>
-</section>
+{% include categorypage.html %}

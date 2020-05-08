@@ -2,67 +2,218 @@
 layout: default
 title: Categorias - El Caraqueño
 ---
-
-<section class="wow fadeIn half-section p-0 top-space">
-	<h4>Categorías</h4>
-	<ul>
-		{% assign categories_list = site.categories | sort %}
-		{% if categories_list.first[0] == null %}
-		{% for category in categories_list %}
-		<li><a href="#{{ category | downcase | downcase | url_escape | strip | replace: ' ', '-' }}">{{ category | camelcase }}
-				({{ site.tags[category].size }})</a></li>
-		{% endfor %}
-		{% else %}
-		{% for category in categories_list %}
-		<li><a href="#{{ category[0] | downcase | url_escape | strip | replace: ' ', '-' }}">{{ category[0] | camelcase }}
-				({{ category[1].size }})</a></li>
-		{% endfor %}
-		{% endif %}
-		{% assign categories_list = nil %}
-	</ul>
+<section class="wow fadeIn padding-10px-bottom" style="visibility: visible; animation-name: fadeIn;">
+	<div class="container">
+		<div class="row">
+			<!-- feature box item-->
+			<div class="col sm-margin-five-bottom last-paragraph-no-margin wow fadeInUp"
+				style="visibility: visible; animation-name: fadeInUp;">
+				<a href="#arte">
+					<div class="feature-box">
+						<div class="content">
+							<i
+								class="icon-paintbrush text-medium-gray icon-large margin-25px-bottom md-margin-15px-bottom"></i>
+							<div
+								class="text-medium alt-font text-capitalize text-extra-dark-gray margin-10px-bottom md-margin-5px-bottom">
+								Arte</div>
+						</div>
+					</div>
+				</a>
+			</div>
+			<!-- end feature box item-->
+			<!-- feature box item-->
+			<div class="col sm-margin-five-bottom last-paragraph-no-margin wow fadeInUp" data-wow-delay="0.2s"
+				style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+				<a href="#ciencia-y-tecnología">
+					<div class="feature-box">
+						<div class="content">
+							<i
+								class="icon-telescope text-medium-gray icon-large margin-25px-bottom md-margin-15px-bottom"></i>
+							<div
+								class="text-medium alt-font text-capitalize text-extra-dark-gray margin-10px-bottom md-margin-5px-bottom">
+								Ciencia y Tecnología</div>
+						</div>
+					</div>
+				</a>
+			</div>
+			<!-- end feature box item-->
+			<!-- feature box item-->
+			<div class="col sm-margin-five-bottom last-paragraph-no-margin wow fadeInUp" data-wow-delay="0.4s"
+				style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+				<a href="#curiosidades">
+					<div class="feature-box">
+						<div class="content">
+							<i
+								class="icon-circle-compass text-medium-gray icon-large margin-25px-bottom md-margin-15px-bottom"></i>
+							<div
+								class="text-medium alt-font text-capitalize text-extra-dark-gray margin-10px-bottom md-margin-5px-bottom">
+								Curiosidades</div>
+						</div>
+					</div>
+				</a>
+			</div>
+			<!-- end feature box item-->
+			<!-- feature box item-->
+			<div class="col sm-margin-five-bottom last-paragraph-no-margin wow fadeInUp" data-wow-delay="0.2s"
+				style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+				<a href="#deporte">
+					<div class="feature-box">
+						<div class="content">
+							<i
+								class="icon-bike text-medium-gray icon-large margin-25px-bottom md-margin-15px-bottom"></i>
+							<div
+								class="text-medium alt-font text-capitalize text-extra-dark-gray margin-10px-bottom md-margin-5px-bottom">
+								Deporte</div>
+						</div>
+					</div>
+				</a>
+			</div>
+			<!-- end feature box item-->
+			<!-- feature box item-->
+			<div class="col sm-margin-five-bottom last-paragraph-no-margin wow fadeInUp" data-wow-delay="0.4s"
+				style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+				<a href="#economía">
+					<div class="feature-box">
+						<div class="content">
+							<i
+								class="icon-wallet text-medium-gray icon-large margin-25px-bottom md-margin-15px-bottom"></i>
+							<div
+								class="text-medium alt-font text-capitalize text-extra-dark-gray margin-10px-bottom md-margin-5px-bottom">
+								Economía</div>
+						</div>
+					</div>
+				</a>
+			</div>
+			<!-- end feature box item-->
+		</div>
+		<div class="row">
+			<!-- feature box item-->
+			<div class="col sm-margin-five-bottom last-paragraph-no-margin wow fadeInUp"
+				style="visibility: visible; animation-name: fadeInUp;">
+				<a href="#entretenimiento">
+					<div class="feature-box">
+						<div class="content">
+							<i
+								class="icon-camera text-medium-gray icon-large margin-25px-bottom md-margin-15px-bottom"></i>
+							<div
+								class="text-medium alt-font text-capitalize text-extra-dark-gray margin-10px-bottom md-margin-5px-bottom">
+								Entretenimiento</div>
+						</div>
+					</div>
+				</a>
+			</div>
+			<!-- end feature box item-->
+			<!-- feature box item-->
+			<div class="col sm-margin-five-bottom last-paragraph-no-margin wow fadeInUp" data-wow-delay="0.2s"
+				style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+				<a href="#historia-y-literatura">
+					<div class="feature-box">
+						<div class="content">
+							<i
+								class="icon-book-open text-medium-gray icon-large margin-25px-bottom md-margin-15px-bottom"></i>
+							<div
+								class="text-medium alt-font text-capitalize text-extra-dark-gray margin-10px-bottom md-margin-5px-bottom">
+								Historia y Literatura</div>
+						</div>
+					</div>
+				</a>
+			</div>
+			<!-- end feature box item-->
+			<!-- feature box item-->
+			<div class="col sm-margin-five-bottom last-paragraph-no-margin wow fadeInUp" data-wow-delay="0.4s"
+				style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+				<a href="#mecánica">
+					<div class="feature-box">
+						<div class="content">
+							<i
+								class="icon-gears text-medium-gray icon-large margin-25px-bottom md-margin-15px-bottom"></i>
+							<div
+								class="text-medium alt-font text-capitalize text-extra-dark-gray margin-10px-bottom md-margin-5px-bottom">
+								Mecánica</div>
+						</div>
+					</div>
+				</a>
+			</div>
+			<!-- end feature box item-->
+			<!-- feature box item-->
+			<div class="col sm-margin-five-bottom last-paragraph-no-margin wow fadeInUp" data-wow-delay="0.2s"
+				style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+				<a href="#salud">
+					<div class="feature-box">
+						<div class="content">
+							<i
+								class="icon-heart text-medium-gray icon-large margin-25px-bottom md-margin-15px-bottom"></i>
+							<div
+								class="text-medium alt-font text-capitalize text-extra-dark-gray margin-10px-bottom md-margin-5px-bottom">
+								Salud</div>
+						</div>
+					</div>
+				</a>
+			</div>
+			<!-- end feature box item-->
+			<!-- feature box item-->
+			<div class="col sm-margin-five-bottom last-paragraph-no-margin wow fadeInUp" data-wow-delay="0.4s"
+				style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+				<a href="#sociedad">
+					<div class="feature-box">
+						<div class="content">
+							<i
+								class="icon-globe text-medium-gray icon-large margin-25px-bottom md-margin-15px-bottom"></i>
+							<div
+								class="text-medium alt-font text-capitalize text-extra-dark-gray margin-10px-bottom md-margin-5px-bottom">
+								Sociedad</div>
+						</div>
+					</div>
+				</a>
+			</div>
+			<!-- end feature box item-->
+		</div>
+	</div>
 </section>
-
 <section class="wow fadeIn half-section">
 	<div class="container">
 		<div class="row">
-			<main
-				class="col-12 col-lg-9 right-sidebar md-margin-60px-bottom sm-margin-40px-bottom">
-
+			<main class="col-12 col-lg-9 right-sidebar md-margin-60px-bottom sm-margin-40px-bottom">
 				{% assign categories_list = site.categories | sort %}
 				{% for category in categories_list %}
-
-				<div class="row padding-20px-top padding-20px-left">
-					<h5 id="{{ category[0] | downcase | url_escape | strip | replace: ' ', '-' }}"
-						class="text-extra-dark-gray alt-font font-weight-600">
-						{{ category[0] | camelcase }}
-					</h5>
-				</div>
-				<div class="d-flex flex-wrap hover-option4 blog-post-style2">
-					{% assign pages_list = category[1] %}
-					{% for post in pages_list limit:3 %}
-					<div class="col-12 col-xl-4 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.6s">
-						<div class="blog-post blog-post-style2">
-							<div class="blog-post-images overflow-hidden margin-25px-bottom sm-margin-15px-bottom">
-								<a href="{{ post.url }}">
-									<img src="https://el-caraqueno.s3.amazonaws.com/{{ post.preview_image }}" alt="">
-								</a>
-							</div>
-							<div class="post-details">
-								<a href="{{ post.url }}"
-									class="post-title text-medium text-extra-dark-gray width-90 d-block lg-width-100">
-									{{ post.title }}
-								</a>
-								<div
-									class="separator-line-horrizontal-full bg-medium-light-gray margin-20px-tb sm-margin-15px-tb">
+				<div class="{% cycle 'bg-light-gray','' %} padding-20px-all border-bottom border-color-deep-pink">
+					<div class="row padding-20px-top padding-20px-left">
+						<a
+							href="{{ baseurl }}/{{ category[0] | downcase | url_escape | strip | replace: ' ', '-' | replace: 'á', 'a' | replace: 'é', 'e'| replace: 'í', 'i'| replace: 'ó', 'o'| replace: 'ú', 'u' }}.html">
+							<h5 id="{{ category[0] | downcase | url_escape | strip | replace: ' ', '-' }}"
+								class="text-extra-dark-gray alt-font font-weight-600">
+								{{ category[0] | camelcase }}
+							</h5>
+						</a>
+					</div>
+					<div class="d-flex flex-wrap hover-option4 blog-post-style2">
+						{% assign pages_list = category[1] %}
+						{% for post in pages_list limit:3 %}
+						<div class="col-12 col-xl-4 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.6s">
+							<div class="blog-post blog-post-style2">
+								<div class="blog-post-images overflow-hidden margin-25px-bottom sm-margin-15px-bottom">
+									<a href="{{ post.url }}">
+										<img src="https://el-caraqueno.s3.amazonaws.com/{{ post.preview_image }}"
+											alt="">
+									</a>
 								</div>
-								<div class="author">
-									<span
-										class="text-medium-gray text-uppercase text-extra-small padding-15px-left d-inline-block">{{ post.publish_date }}</span>
+								<div class="post-details">
+									<a href="{{ post.url }}"
+										class="post-title text-medium text-extra-dark-gray width-90 d-block lg-width-100">
+										{{ post.title }}
+									</a>
+									<div
+										class="separator-line-horrizontal-full bg-medium-light-gray margin-20px-tb sm-margin-15px-tb">
+									</div>
+									<div class="author">
+										<span
+											class="text-medium-gray text-uppercase text-extra-small padding-15px-left d-inline-block">{{ post.publish_date }}</span>
+									</div>
 								</div>
 							</div>
 						</div>
+						{% endfor %}
 					</div>
-					{% endfor %}
 				</div>
 
 				{% endfor %}
