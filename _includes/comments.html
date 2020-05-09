@@ -1,18 +1,19 @@
 <div id="disqus_thread" class="col-12"></div>
 <script>
-
-
-var disqus_config = function () {
-this.page.url = "{{ post.url }}";
-this.page.identifier = "{{ post.id }}";
-};
-
-(function() {
-var d = document, s = d.createElement('script');
-s.src = 'https://el-caraqueno.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
+    var disqus_config = function () 
+    {
+        this.page.url = "{{ post.url }}";
+        this.page.identifier = "{{ post.id }}";
+    };
+    (function() 
+    {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://el-caraqueno.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
 </script>
-<noscript>Si desea ver los comentarios, habilite JavaScript en su explorador web.</noscript>
+<noscript>
+    Si desea ver los comentarios, habilite JavaScript en su explorador web.
+</noscript>
                             

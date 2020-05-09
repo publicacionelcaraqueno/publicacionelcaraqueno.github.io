@@ -1,4 +1,7 @@
 <head>
+    <title>{{ page.title }}</title>
+
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-165984812-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -10,60 +13,56 @@
         gtag('config', 'UA-165984812-1');
     </script>
 
-    <title>{{ page.title }}</title>
-
     <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
-        <!-- description -->
-        <meta name="description" content="El Caraqueño es una publicación Venezolana que ofrece información interesante de todo el planeta sobre diversos temas.">
-        <!-- keywords -->
-        <meta name="keywords" content="Caracas, Venezuela, información, noticias, acontecimientos, ciencia, tecnología, historia, cultura, arte, deporte, salud, entretenimiento">
-        <!-- favicon -->
-        <link rel="apple-touch-icon" sizes="57x57" href="{{ baseurl }}/assets/images/apple-icon-57x57.png">
-        <link rel="apple-touch-icon" sizes="60x60" href="{{ baseurl }}/assets/images/apple-icon-60x60.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="{{ baseurl }}/assets/images/apple-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="{{ baseurl }}/assets/images/apple-icon-76x76.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="{{ baseurl }}/assets/images/apple-icon-114x114.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="{{ baseurl }}/assets/images/apple-icon-120x120.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="{{ baseurl }}/assets/images/apple-icon-144x144.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="{{ baseurl }}/assets/images/apple-icon-152x152.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="{{ baseurl }}/assets/images/apple-icon-180x180.png">
-        <link rel="icon" type="image/png" sizes="192x192"  href="{{ baseurl }}/assets/images/android-icon-192x192.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="{{ baseurl }}/assets/images/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="96x96" href="{{ baseurl }}/assets/images/favicon-96x96.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="{{ baseurl }}/assets/images/favicon-16x16.png">
-        <link rel="manifest" href="{{ baseurl }}/assets/images/manifest.json">
-        <meta name="msapplication-TileColor" content="#ffffff">
-        <meta name="msapplication-TileImage" content="{{ baseurl }}/assets/images/ms-icon-144x144.png">
-        <meta name="theme-color" content="#ffffff">
-        <!-- animation -->
-        <link rel="stylesheet" href="{{ baseurl }}/assets/css/animate.css" />
-        <!-- bootstrap -->
-        <link rel="stylesheet" href="{{ baseurl }}/assets/css/bootstrap.min.css" />
-        <!-- et line icon --> 
-        <link rel="stylesheet" href="{{ baseurl }}/assets/css/et-line-icons.css" />
-        <!-- font-awesome icon -->
-        <link rel="stylesheet" href="{{ baseurl }}/assets/css/font-awesome.min.css" />
-        <!-- themify icon -->
-        <link rel="stylesheet" href="{{ baseurl }}/assets/css/themify-icons.css">
-        <!-- swiper carousel -->
-        <link rel="stylesheet" href="{{ baseurl }}/assets/css/swiper.min.css">
-        <!-- justified gallery  -->
-        <link rel="stylesheet" href="{{ baseurl }}/assets/css/justified-gallery.min.css">
-        <!-- magnific popup -->
-        <link rel="stylesheet" href="{{ baseurl }}/assets/css/magnific-popup.css" />
-        <!-- revolution slider -->
-        <link rel="stylesheet" type="text/css" href="{{ baseurl }}/assets/revolution/css/settings.css" media="screen" />
-        <link rel="stylesheet" type="text/css" href="{{ baseurl }}/assets/revolution/css/layers.css">
-        <link rel="stylesheet" type="text/css" href="{{ baseurl }}/assets/revolution/css/navigation.css">
-        <!-- bootsnav -->
-        <link rel="stylesheet" href="{{ baseurl }}/assets/css/bootsnav.css">
-        <!-- style -->
-        <link rel="stylesheet" href="{{ baseurl }}/assets/css/style.css" />
-        <!-- responsive css -->
-        <link rel="stylesheet" href="{{ baseurl }}/assets/css/responsive.css" />
-        <!--[if IE]>
-            <script src="js/html5shiv.js"></script>
-        <![endif]-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
+    <meta name="description" content="El Caraqueño es una publicación Venezolana que ofrece información interesante de todo el planeta sobre diversos temas.">
+    <meta name="keywords" content="Caracas, Venezuela, información, noticias, acontecimientos, ciencia, tecnología, historia, cultura, arte, deporte, salud, entretenimiento, curiosidades, economía, pana">
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ baseurl }}/assets/images/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{ baseurl }}/assets/images/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ baseurl }}/assets/images/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ baseurl }}/assets/images/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ baseurl }}/assets/images/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ baseurl }}/assets/images/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ baseurl }}/assets/images/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ baseurl }}/assets/images/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ baseurl }}/assets/images/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="{{ baseurl }}/assets/images/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ baseurl }}/assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ baseurl }}/assets/images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ baseurl }}/assets/images/favicon-16x16.png">
+    <link rel="manifest" href="{{ baseurl }}/assets/images/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="{{ baseurl }}/assets/images/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- animation -->
+    <link rel="stylesheet" href="{{ baseurl }}/assets/css/animate.css" />
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="{{ baseurl }}/assets/css/bootstrap.min.css" />
+    <!-- et line icon --> 
+    <link rel="stylesheet" href="{{ baseurl }}/assets/css/et-line-icons.css" />
+    <!-- font-awesome icon -->
+    <link rel="stylesheet" href="{{ baseurl }}/assets/css/font-awesome.min.css" />
+    <!-- themify icon -->
+    <link rel="stylesheet" href="{{ baseurl }}/assets/css/themify-icons.css">
+    <!-- swiper carousel -->
+    <link rel="stylesheet" href="{{ baseurl }}/assets/css/swiper.min.css">
+    <!-- justified gallery  -->
+    <link rel="stylesheet" href="{{ baseurl }}/assets/css/justified-gallery.min.css">
+    <!-- magnific popup -->
+    <link rel="stylesheet" href="{{ baseurl }}/assets/css/magnific-popup.css" />
+    <!-- revolution slider -->
+    <link rel="stylesheet" type="text/css" href="{{ baseurl }}/assets/revolution/css/settings.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="{{ baseurl }}/assets/revolution/css/layers.css">
+    <link rel="stylesheet" type="text/css" href="{{ baseurl }}/assets/revolution/css/navigation.css">
+    <!-- bootsnav -->
+    <link rel="stylesheet" href="{{ baseurl }}/assets/css/bootsnav.css">
+    <!-- style -->
+    <link rel="stylesheet" href="{{ baseurl }}/assets/css/style.css" />
+    <!-- responsive css -->
+    <link rel="stylesheet" href="{{ baseurl }}/assets/css/responsive.css" />
+    <!--[if IE]>
+        <script src="js/html5shiv.js"></script>
+    <![endif]-->
 </head>
